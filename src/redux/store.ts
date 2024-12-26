@@ -3,16 +3,16 @@ import {persistReducer, persistStore} from 'redux-persist';
 import {setupListeners} from '@reduxjs/toolkit/query';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import productReducer from './productSlice';
+import dataReducer from './dataSlice';
 
 const rootReducer = combineReducers({
-  product: productReducer,
+  storeddata: dataReducer,
 });
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['product'],
+  whitelist: ['storeddata'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

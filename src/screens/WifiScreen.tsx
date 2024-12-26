@@ -1,12 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {WifiScaner, Wrapper} from '../components';
 
 export const WifiScreen = () => {
   return (
-    <View>
-      <Text>WifiScreen</Text>
-    </View>
+    <Wrapper>
+      <WifiScaner />
+    </Wrapper>
   );
 };
-
-const S = StyleSheet.create({});
