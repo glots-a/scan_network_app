@@ -1,12 +1,15 @@
 import {createSlice, nanoid} from '@reduxjs/toolkit';
 import {Code} from '../types/Code';
+import {WifiNetwork} from '../types/WIFI';
 
 type State = {
   codes: Code[] | null;
+  wifi: WifiNetwork[];
 };
 
 const initialState: State = {
   codes: null,
+  wifi: [],
 };
 
 const dataSlice = createSlice({
@@ -28,8 +31,30 @@ const dataSlice = createSlice({
         store.codes = [{...action.payload, id}];
       }
     },
+    addNewNetwork: (store, action) => {
+      const networks = action.payload;
+
+      networks.forEach((network: WifiNetwork) => {
+        const BSSID = network?.BSSID;
+        const SSID = network?.SSID;
+        const capabilities = network?.capabilities;
+        const frequency = network?.frequency;
+        const level = network?.level;
+        const timestamp = network?.timestamp;
+
+        // Check if the network already exists in the list based on BSSID
+        const isDuplicate = store.wifi.some(item => item?.BSSID === BSSID);
+
+        if (!isDuplicate) {
+          store.wifi = [
+            {BSSID, SSID, capabilities, frequency, level, timestamp},
+            ...store.wifi,
+          ];
+        }
+      });
+    },
   },
 });
 
 export default dataSlice.reducer;
-export const {addNewCode} = dataSlice.actions;
+export const {addNewCode, addNewNetwork} = dataSlice.actions;

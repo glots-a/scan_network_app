@@ -78,14 +78,6 @@ const S = StyleSheet.create({
     paddingVertical: 16,
     borderRadius: 8,
     width: '75%',
-    shadowColor: '#000',
-    shadowOffset: {
-      height: 3,
-      width: 0,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-
     borderColor: '#ccc',
     borderWidth: 1,
   },

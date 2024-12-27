@@ -7426,6 +7426,7 @@ __metadata:
     prettier: 2.8.8
     react: 18.3.1
     react-native: 0.76.5
+    react-native-ble-manager: 10.0.2
     react-native-gesture-handler: ^2.21.2
     react-native-safe-area-context: ^5.0.0
     react-native-screens: ^4.4.0
@@ -8172,6 +8173,15 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-native-ble-manager@npm:10.0.2":
+  version: 10.0.2
+  resolution: "react-native-ble-manager@npm:10.0.2"
+  peerDependencies:
+    react-native: ">=0.60.0"
+  checksum: 03787c6919ccfafb7dca1af9902bd99d7fe0f97508b988c2d4c0bb0d0d5c61d7985dff0f2b24dc57937fc55486bb73d78c344b3fa67f61ddd8c6c940e9c8b16a
   languageName: node
   linkType: hard
 

@@ -1,14 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {BluetoothScanner, Wrapper} from '../components';
 
 export const BluetothScreen = () => {
   return (
-    <View>
-      <Text>BluetothScreen</Text>
-    </View>
+    <Wrapper>
+      <BluetoothScanner />
+    </Wrapper>
   );
 };
-
-export default BluetothScreen;
-
-const styles = StyleSheet.create({});
